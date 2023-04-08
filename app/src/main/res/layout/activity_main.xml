@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokemon_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="136dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/charmander" />
+
+    <TextView
+        android:id="@+id/pokemonName"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Charmander"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/pokemonImage"
+        app:layout_constraintEnd_toEndOf="@id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/pokemonType"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Fire"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/pokemonName"
+        app:layout_constraintEnd_toEndOf="@id/pokemonName"
+        app:layout_constraintTop_toBottomOf="@id/pokemonName" />
+
+    <Button
+        android:id="@+id/nextPokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Pokemon"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pokemonType"
+        app:layout_constraintEnd_toEndOf="@id/pokemonType"
+        app:layout_constraintTop_toBottomOf="@id/pokemonType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

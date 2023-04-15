@@ -27,12 +27,15 @@
         android:id="@+id/pokemonName"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/aldrich"
+        android:padding="8dp"
         android:text="Charmander"
         android:textAlignment="center"
+        android:textColor="#EF476F"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/pokemonImage"
         app:layout_constraintEnd_toEndOf="@id/pokemonImage"
+        app:layout_constraintStart_toStartOf="@id/pokemonImage"
         app:layout_constraintTop_toBottomOf="@id/pokemonImage" />
 
     <TextView
@@ -51,11 +54,12 @@
         android:id="@+id/nextPokemon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee_shade"
         android:text="Next Pokemon"
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/pokemonType"
         app:layout_constraintEnd_toEndOf="@id/pokemonType"
+        app:layout_constraintStart_toStartOf="@id/pokemonType"
         app:layout_constraintTop_toBottomOf="@id/pokemonType" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        getPokemonImageURL()
         Log.d("pokemonImageURL", "pokemon image URL set")
 
         val button = findViewById<Button>(R.id.nextPokemon)
@@ -40,14 +39,16 @@ class MainActivity : AppCompatActivity() {
                 pokemonImageURL = json.jsonObject.getString("message")
 
                 val pokemonImageArray = json.jsonObject.getJSONArray("message")
+                val adapter = PokemonAdapter(pokemonList)
+
+                rvPokemon.adapter = adapter
+                rvPokemon.layoutManager = LinearLayoutManager(this@MainActivity)
 
                 for (i in 0 until pokemonImageArray.length()) {
                     pokemonList.add(pokemonImageArray.getString(i))
                 }
 
-                val adapter = PokemonAdapter(pokemonList)
-                rvPokemon.adapter = adapter
-                rvPokemon.layoutManager = LinearLayoutManager(this@MainActivity)
+                getPokemonImageURL()
             }
 
             override fun onFailure(
